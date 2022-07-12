@@ -1,5 +1,5 @@
 //Copyright(c) 2015 Michael Allar
-
+#include "WidgetList.h"
 #include "UMGExPlugin.h"
 
 UWidgetList::UWidgetList(const class FObjectInitializer& PCIP)

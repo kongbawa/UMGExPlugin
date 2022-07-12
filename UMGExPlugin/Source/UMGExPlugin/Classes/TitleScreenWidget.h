@@ -1,7 +1,7 @@
 //Copyright(c) 2015 Michael Allar
 #pragma once
 
-#include "OnlineIdentityInterface.h"
+#include "Interfaces/OnlineIdentityInterface.h"
 #include "TitleScreenWidget.generated.h"
 
 /**

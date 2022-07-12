@@ -1,6 +1,7 @@
 //Copyright(c) 2015 Michael Allar
 #pragma once
 
+#include "Components/SlateWrapperTypes.h"
 #include "UMGExTypes.generated.h"
 
 /** Used for exposing FIntPoint */

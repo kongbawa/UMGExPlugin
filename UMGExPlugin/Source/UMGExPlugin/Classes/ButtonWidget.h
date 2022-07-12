@@ -2,6 +2,7 @@
 #pragma once
 
 #include "UMGExTypes.h"
+#include "UMGExWidget.h"
 #include "ButtonWidget.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FButtonWidgetOnPressedSignature, const FName, ButtonTag);

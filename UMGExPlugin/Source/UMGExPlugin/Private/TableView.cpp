@@ -1,4 +1,5 @@
 //Copyright(c) 2015 Michael Allar
+#include "TableView.h"
 #include "UMGExPlugin.h"
 
 TSharedRef<SWidget> UTableView::RebuildWidget()

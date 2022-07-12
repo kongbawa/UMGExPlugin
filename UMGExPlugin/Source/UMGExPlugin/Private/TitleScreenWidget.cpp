@@ -1,5 +1,5 @@
 //Copyright(c) 2015 Michael Allar
-
+#include "TitleScreenWidget.h"
 #include "UMGExPlugin.h"
 
 UTitleScreenWidget::UTitleScreenWidget(const class FObjectInitializer& PCIP)

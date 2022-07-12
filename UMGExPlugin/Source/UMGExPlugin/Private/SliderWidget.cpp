@@ -1,5 +1,5 @@
 //Copyright(c) 2015 Michael Allar
-
+#include "SliderWidget.h"
 #include "UMGExPlugin.h"
 
 USliderWidget::USliderWidget(const class FObjectInitializer& PCIP)

@@ -1,5 +1,5 @@
 //Copyright(c) 2015 Michael Allar
-
+#include "UMGExBlueprintLibrary.h"
 #include "UMGExPlugin.h"
 #include "InputCoreClasses.h"
 
@@ -62,7 +62,7 @@ TArray<FLabelButtonInfo> UUMGExBlueprintLibrary::GetAllInputMappingLabelButtonIn
 
 	TArray<FLabelButtonInfo> Infos;
 
-	for (FInputActionKeyMapping Mapping : InputSettings->ActionMappings)
+	for (FInputActionKeyMapping Mapping : InputSettings->GetActionMappings())
 	{
 		if (ExclusionList.Contains(Mapping.ActionName))
 		{
@@ -76,7 +76,7 @@ TArray<FLabelButtonInfo> UUMGExBlueprintLibrary::GetAllInputMappingLabelButtonIn
 		Infos.Add(Info);
 	}
 
-	for (FInputAxisKeyMapping Mapping : InputSettings->AxisMappings)
+	for (FInputAxisKeyMapping Mapping : InputSettings->GetAxisMappings())
 	{
 		if (ExclusionList.Contains(Mapping.AxisName))
 		{
@@ -99,10 +99,10 @@ FLabelButtonInfo UUMGExBlueprintLibrary::GetInputMappingLabelButtonInfo(const FN
 
 	FLabelButtonInfo Info;
 
-	const FInputActionKeyMapping* ActionKeyMapping = InputSettings->ActionMappings.FindByPredicate([MappingName](const FInputActionKeyMapping& Mapping) -> bool
+	FInputActionKeyMapping* ActionKeyMapping = const_cast<FInputActionKeyMapping*>(InputSettings->GetActionMappings().FindByPredicate([MappingName](const FInputActionKeyMapping& Mapping) -> bool
 	{
 		return Mapping.ActionName == MappingName;
-	});
+	}));
 
 	if (ActionKeyMapping)
 	{
@@ -112,10 +112,10 @@ FLabelButtonInfo UUMGExBlueprintLibrary::GetInputMappingLabelButtonInfo(const FN
 		return Info;
 	}
 
-	const FInputAxisKeyMapping* AxisKeyMapping = InputSettings->AxisMappings.FindByPredicate([MappingName](const FInputAxisKeyMapping& Mapping) -> bool
+	FInputAxisKeyMapping* AxisKeyMapping = const_cast<FInputAxisKeyMapping*>(InputSettings->GetAxisMappings().FindByPredicate([MappingName](const FInputAxisKeyMapping& Mapping) -> bool
 	{
 		return Mapping.AxisName == MappingName;
-	});
+	}));
 
 	if (AxisKeyMapping)
 	{
@@ -132,10 +132,10 @@ bool UUMGExBlueprintLibrary::SetInputMappingKeyBind(const FName& MappingName, FK
 {
 	UInputSettings* InputSettings = GetMutableDefault<UInputSettings>();
 
-	FInputActionKeyMapping* ActionKeyMapping = InputSettings->ActionMappings.FindByPredicate([MappingName](FInputActionKeyMapping& Mapping) -> bool
+	FInputActionKeyMapping* ActionKeyMapping = const_cast<FInputActionKeyMapping*>(InputSettings->GetActionMappings().FindByPredicate([MappingName](FInputActionKeyMapping& Mapping) -> bool
 	{
 		return Mapping.ActionName == MappingName;
-	});
+	}));
 
 	if (ActionKeyMapping != nullptr)
 	{
@@ -144,10 +144,10 @@ bool UUMGExBlueprintLibrary::SetInputMappingKeyBind(const FName& MappingName, FK
 		return true;
 	}
 
-	FInputAxisKeyMapping* AxisKeyMapping = InputSettings->AxisMappings.FindByPredicate([MappingName](FInputAxisKeyMapping& Mapping) -> bool
+	FInputAxisKeyMapping* AxisKeyMapping = const_cast<FInputAxisKeyMapping*>(InputSettings->GetAxisMappings().FindByPredicate([MappingName](FInputAxisKeyMapping& Mapping) -> bool
 	{
 		return Mapping.AxisName == MappingName;
-	});
+	}));
 
 	if (AxisKeyMapping != nullptr)
 	{

@@ -8,3 +8,4 @@
 #include "UMGExPluginClasses.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogUMGEx, VeryVerbose, All);
+DEFINE_LOG_CATEGORY(LogUMGEx);

@@ -1,5 +1,5 @@
 //Copyright(c) 2015 Michael Allar
-
+#include "RadioScrollerWidget.h"
 #include "UMGExPlugin.h"
 
 URadioScrollerWidget::URadioScrollerWidget(const class FObjectInitializer& PCIP)

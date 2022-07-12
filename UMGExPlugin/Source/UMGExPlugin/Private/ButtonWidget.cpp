@@ -1,4 +1,5 @@
-//Copyright(c) 2015 Michael Allar
+
+#include "ButtonWidget.h"
 #include "UMGExPlugin.h"
 
 

@@ -4,7 +4,7 @@ namespace UnrealBuildTool.Rules
 {
 	public class UMGExPlugin : ModuleRules
 	{
-		public UMGExPlugin(TargetInfo Target)
+		public UMGExPlugin(ReadOnlyTargetRules target): base(target)
 		{
 			PublicIncludePaths.AddRange(
 				new string[] {

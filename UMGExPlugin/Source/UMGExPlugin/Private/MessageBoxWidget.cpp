@@ -1,6 +1,7 @@
 //Copyright(c) 2015 Michael Allar
+#include "MessageBoxWidget.h"
 #include "UMGExPlugin.h"
-#include "WidgetBlueprintLibrary.h"
+#include "Blueprint/WidgetBlueprintLibrary.h"
 
 void UMessageBoxWidget::TriggerOnButtonPressed(const FName ButtonTag)
 {
@@ -24,7 +25,7 @@ UMessageBoxWidget* UMessageBoxWidget::ShowMessageBoxWidget(APlayerController* Pl
 
 	// Set player controller input to only this widget
 	FInputModeUIOnly InputMode;
-	InputMode.SetLockMouseToViewport(false);
+	InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
 	InputMode.SetWidgetToFocus(NewMessageBoxWidget->TakeWidget());
 	PlayerController->SetInputMode(InputMode);
 

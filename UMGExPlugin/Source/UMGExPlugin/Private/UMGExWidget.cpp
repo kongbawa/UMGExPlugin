@@ -1,5 +1,5 @@
 //Copyright(c) 2015 Michael Allar
-
+#include "UMGExWidget.h"
 #include "UMGExPlugin.h"
 
 UUMGExWidget::UUMGExWidget(const class FObjectInitializer& PCIP)

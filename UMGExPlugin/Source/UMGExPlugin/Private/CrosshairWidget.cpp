@@ -1,5 +1,4 @@
-//Copyright(c) 2015 Michael Allar
-
+#include "CrosshairWidget.h"
 #include "UMGExPlugin.h"
 #include "CrosshairWidget.h"
 

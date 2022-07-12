@@ -1,4 +1,5 @@
 //Copyright(c) 2015 Michael Allar
+#include "UMGExTypes.h"
 #include "UMGExPlugin.h"
 
 FExposedIntPoint::FExposedIntPoint(const FIntPoint& InIntPoint)

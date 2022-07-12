@@ -2,6 +2,7 @@
 #pragma once
 
 #include "UMGExTypes.h"
+#include "Blueprint/UserWidget.h"
 #include "UMGExWidget.generated.h"
 
 /**

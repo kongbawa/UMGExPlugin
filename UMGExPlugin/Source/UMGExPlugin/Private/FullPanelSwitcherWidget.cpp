@@ -1,5 +1,5 @@
 //Copyright(c) 2015 Michael Allar
-
+#include "FullPanelSwitcherWidget.h"
 #include "UMGExPlugin.h"
 
 UFullPanelSwitcherWidget::UFullPanelSwitcherWidget(const class FObjectInitializer& PCIP)

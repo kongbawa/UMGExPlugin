@@ -1,4 +1,5 @@
 //Copyright(c) 2015 Michael Allar
+#include "TableListRow.h"
 #include "UMGExPlugin.h"
 
 
